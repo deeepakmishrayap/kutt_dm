@@ -77,7 +77,11 @@ app.get("*", renders.notFound);
 // handle errors coming from above routes
 app.use(helpers.error);
 
-const port = process.env.PORT || 3000;  // Use the correct port
-app.listen(env.PORT,'0.0.0.0', () => {
-  console.log(`> Ready on http://0.0.0.0:${env.PORT}`);
+//const port = process.env.PORT || 3000;  // Use the correct port
+//app.listen(env.PORT,'0.0.0.0', () => {
+  //console.log(`> Ready on http://0.0.0.0:${env.PORT}`);
+//});
+
+app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
+  console.log(`> Ready on http://0.0.0.0:${process.env.PORT || 3000}`);
 });
